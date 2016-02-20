@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sh.autocall.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_phone_no"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:hint="请输入电话号码"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="0dip"
+        android:imeOptions="actionNext"
+        android:nextFocusForward="@+id/et_call_interval"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:text="开始"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="0dip"
+        />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:text="停止"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="0dip"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="每隔"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/et_call_interval"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:inputType="number"
+            android:hint="10"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/et_hand_up_interval" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="秒拨打电话（默认10秒）"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="每隔"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/et_hand_up_interval"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:hint="10"
+            android:inputType="number"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="秒挂断电话（默认10秒）"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
